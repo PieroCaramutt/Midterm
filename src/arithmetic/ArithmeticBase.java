@@ -15,11 +15,20 @@ import java.util.Scanner;
  */
 public class ArithmeticBase 
 {
+            public enum Operation {
+                PLUS,
+                MINUS,
+                TIME,
+                DIVIDE;
+            }
+    
  public double x,y;
     double calculate(double x, double y) 
-        {
+        {        
         Scanner sc =new Scanner(System.in);
-        System.out.println("Enter arithmetic operation to Perform: ");
+        System.out.println("Enter arithmetic operation to Perform:");
+        for (Operation e : Operation.values()){System.out.println(e.toString());}
+        System.out.println("\n Set the operation");
         String s= sc.next();
         switch (s.toUpperCase()) 
         {
